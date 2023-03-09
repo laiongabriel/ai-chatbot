@@ -1,0 +1,3 @@
+[submodule "ai-chatbot-endpoint"]
+	path = ai-chatbot-endpoint
+	url = https://github.com/laiongabriel/ai-chatbot-endpoint
