@@ -12,7 +12,7 @@ You can check out the app [here](https://ai-powered-chatbot.netlify.app/).
 
 ### Backend:
 
-In order not to show the API key on the front-end, the connection is established through an endpoint created with the Express.js framework, which makes the request and returns the data to the front-end. There is a limitation of 25 messages per day for each user.
+In order not to show the API key on the front-end, the connection is established through an endpoint created with the Express.js framework, which makes the request and returns the data to the front-end. There is a limitation of 20 messages per day for each user.
 
 ### Frontend:
 
