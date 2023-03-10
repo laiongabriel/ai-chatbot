@@ -12,6 +12,7 @@ function updateTextareaHeight() {
    textarea.style.height = textarea.scrollHeight + "px";
 
    if (textarea.offsetHeight >= 200) textarea.style.overflowY = "scroll";
+   else textarea.style.overflowY = "hidden";
 }
 
 // Função para limpar o conteúdo do elemento textarea

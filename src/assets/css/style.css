@@ -33,7 +33,6 @@ body {
    margin: 0 auto;
    overflow-x: hidden;
    font-family: "Lexend Deca", sans-serif;
-   transition: all 0.3s;
 }
 
 img {
@@ -55,7 +54,6 @@ img {
    gap: 14px;
    padding: 23px 25px 15px;
    overflow-x: hidden;
-   font-size: 1rem;
 }
 
 .dot {
