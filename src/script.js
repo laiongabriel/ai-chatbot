@@ -101,13 +101,16 @@ async function sendMessageToApi(message) {
       }, 400);
 
       // Envia a mensagem do usuário para a API
-      const response = await fetch("http://localhost:3000/ask", {
-         method: "POST",
-         headers: {
-            "Content-Type": "application/json",
-         },
-         body: JSON.stringify({ message }),
-      });
+      const response = await fetch(
+         "https://ai-chatbot-endpoint.onrender.com/ask",
+         {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ message }),
+         }
+      );
 
       // Limpa o Timeout e não executa o createEllipsis()
       // se a promise não for bem-sucedida evitando bug visual
