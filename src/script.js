@@ -93,13 +93,14 @@ function createEllipsis() {
    `;
 }
 
-// Função para enviar a mensagem do usuário para a API
 async function sendMessageToApi(message) {
    try {
+      // Depois de 200 milisegundos, cria um ellipsis para servir de
+      // animação de carregamento enquanto a promise ainda não foi resolvida
       const ellipsisTimeout = setTimeout(() => {
          setTextareaPlaceholder("Gerando resposta...", true);
          createAndSendAiMessage(null, createEllipsis());
-      }, 400);
+      }, 200);
 
       // Envia a mensagem do usuário para a API
       const response = await fetch(
@@ -113,18 +114,16 @@ async function sendMessageToApi(message) {
          }
       );
 
-      // Limpa o Timeout e não executa o createEllipsis()
-      // se a promise não for bem-sucedida, evitando bug visual
       clearTimeout(ellipsisTimeout);
-      setTextareaPlaceholder("Faça uma pergunta!", false);
+      divMessages.lastChild.remove();
 
       if (response.status === 429) {
+         setTextareaPlaceholder("Limite de mensagens atingido!", true);
          createAndSendAiMessage(
             "Você atingiu o limite de mensagens diárias! Volte novamente amanhã."
          );
-         setTextareaPlaceholder("Faça uma pergunta!", true);
       } else {
-         divMessages.lastChild.remove();
+         setTextareaPlaceholder("Faça uma pergunta!", false);
          const answer = await response.json();
          createAndSendAiMessage(answer);
       }
