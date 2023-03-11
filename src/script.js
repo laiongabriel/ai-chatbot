@@ -97,7 +97,7 @@ function createEllipsis() {
 async function sendMessageToApi(message) {
    try {
       const ellipsisTimeout = setTimeout(() => {
-         setTextareaPlaceholder("Pensando...", true);
+         setTextareaPlaceholder("Gerando resposta...", true);
          createAndSendAiMessage(null, createEllipsis());
       }, 400);
 
@@ -114,7 +114,7 @@ async function sendMessageToApi(message) {
       );
 
       // Limpa o Timeout e não executa o createEllipsis()
-      // se a promise não for bem-sucedida evitando bug visual
+      // se a promise não for bem-sucedida, evitando bug visual
       clearTimeout(ellipsisTimeout);
       setTextareaPlaceholder("Faça uma pergunta!", false);
 

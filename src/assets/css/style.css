@@ -2,13 +2,14 @@
    margin: 0px;
    padding: 0px;
    box-sizing: border-box;
-   line-height: 1.5em;
+   line-height: 1.6;
+   letter-spacing: 0.2px;
 }
 
 :root {
    --body-bg-red: #c7bebe;
    --body-bg-blue: #a8b6c7;
-   --main-white: #ebebeb;
+   --main-white: #eff0f2;
    --ai-text: #000000;
 }
 
@@ -111,9 +112,9 @@ img {
 }
 
 .user-message {
-   background: #4672a3;
+   background: #4876ac;
    word-wrap: break-word;
-   color: var(--main-white);
+   color: #f1f1f1;
    padding: 10px 12px;
    border-radius: 7px 0px 7px 7px;
    max-width: 70%;
