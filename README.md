@@ -6,7 +6,7 @@ Simple yet nice chatbot crafted to use OpenAI's gpt-3.5-turbo language model and
 
 ![Project preview](src/assets/img/preview.png)
 
-Too lazy to read? No problem! Experience magic first-hand right [here](https://ai-powered-chatbot.netlify.app/).
+Too lazy to read? No problem! Experience the magic first-hand right [here](https://ai-powered-chatbot.netlify.app/).
 
 ## Magnificent Technologies 💻
 
