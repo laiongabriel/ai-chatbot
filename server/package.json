@@ -4,7 +4,7 @@
   "description": "Simple chatbot that uses OpenAI's gpt-3.5-turbo language model to generate responses based on user input.",
   "main": "server.js",
   "scripts": {
-    "test": "node server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",

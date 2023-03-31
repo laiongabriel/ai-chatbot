@@ -7,7 +7,7 @@ const rateLimit = require("express-rate-limit");
 
 const apiRequestLimiter = rateLimit({
    windowMs: 24 * 60 * 60 * 1000,
-   max: 20,
+   max: 15,
 });
 
 app.use(cors());
@@ -20,17 +20,18 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 app.post("/ask", async (req, res) => {
-   const { message } = req.body;
    try {
+      const { message } = req.body;
       const completion = await openai.createChatCompletion({
          model: "gpt-3.5-turbo",
-         temperature: 0.6,
+         temperature: 0.7,
          messages: [{ role: "user", content: message }],
       });
 
       const text = completion.data.choices[0].message.content.trim();
       res.json(text);
    } catch (error) {
+      res.json(error);
       console.log(error);
    }
 });

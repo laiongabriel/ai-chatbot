@@ -39,7 +39,6 @@ function sendOnClick() {
    }
 }
 
-// Função para criar e enviar a mensagem do usuário para a API
 function createAndSendUserMessage(message) {
    const div = document.createElement("div");
    div.classList.add("user-message");
@@ -52,7 +51,6 @@ function createAndSendUserMessage(message) {
    }, 100);
 }
 
-// Função para criar e enviar a mensagem da AI para o usuário
 function createAndSendAiMessage(message, ellipsis) {
    const aiContent = document.createElement("div");
    aiContent.classList.add("ai-content");
@@ -84,7 +82,6 @@ function setTextareaPlaceholder(text, disabled) {
    textarea.disabled = disabled;
 }
 
-// Função para criar um efeito de reticências
 function createEllipsis() {
    return `
    <div class="dot"></div>
@@ -95,24 +92,18 @@ function createEllipsis() {
 
 async function sendMessageToApi(message) {
    try {
-      // Depois de 200 milisegundos, cria um ellipsis para servir de
-      // animação de carregamento enquanto a promise ainda não foi resolvida
       const ellipsisTimeout = setTimeout(() => {
          setTextareaPlaceholder("Gerando resposta...", true);
          createAndSendAiMessage(null, createEllipsis());
       }, 200);
 
-      // Envia a mensagem do usuário para a API
-      const response = await fetch(
-         "https://ai-chatbot-endpoint.onrender.com/ask",
-         {
-            method: "POST",
-            headers: {
-               "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ message }),
-         }
-      );
+      const response = await fetch("https://ai-chatbot.onrender.com/ask", {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json",
+         },
+         body: JSON.stringify({ message }),
+      });
 
       clearTimeout(ellipsisTimeout);
       divMessages.lastChild.remove();
@@ -133,7 +124,7 @@ async function sendMessageToApi(message) {
       divMessages.lastChild.remove();
 
       createAndSendAiMessage(
-         "Desculpe, ocorreu um erro na API da OpenAI. Se o problema persistir, tente novamente mais tarde."
+         "Desculpe, parece que a API da OpenAI deu um leve tropeço. Mas, sabe como é a tecnologia, né? Se o problema não der uma trégua, dá um toque pra mim!"
       );
    }
 }
