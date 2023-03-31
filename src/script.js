@@ -97,13 +97,16 @@ async function sendMessageToApi(message) {
          createAndSendAiMessage(null, createEllipsis());
       }, 200);
 
-      const response = await fetch("https://ai-chatbot-411g.onrender.com/", {
-         method: "POST",
-         headers: {
-            "Content-Type": "application/json",
-         },
-         body: JSON.stringify({ message }),
-      });
+      const response = await fetch(
+         "https://ai-chatbot-endpoint.onrender.com/ask",
+         {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ message }),
+         }
+      );
 
       clearTimeout(ellipsisTimeout);
       divMessages.lastChild.remove();
