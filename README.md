@@ -1,19 +1,19 @@
-# AI Chatbot
+# AI Chatbot 🤖💬
 
-Simple chatbot that uses OpenAI's gpt-3.5-turbo language model to generate responses based on user input.
+Simple yet nice chatbot crafted to use OpenAI's gpt-3.5-turbo language model and generate responses based on user input. Be amazed, be entertained!
 
-## Preview
+## Preview 🔍
 
 ![Project preview](src/assets/img/preview.png)
 
-You can check out the app [here](https://ai-powered-chatbot.netlify.app/).
+Too lazy to read? No problem! Experience magic first-hand right [here](https://ai-powered-chatbot.netlify.app/).
 
-## Technologies
+## Magnificent Technologies 💻
 
-### Backend:
+### Backend - Express.js Royalty:
 
-In order not to show the API key on the front-end, the connection is established through an endpoint created with the Express.js framework, which makes the request and returns the data to the front-end. There is a limitation of 15 messages per day for each user.
+To keep those pesky API keys hidden from the prying eyes of the front-end, we've employed the regal Express.js framework. It creates a majestic endpoint, requests the data, and bestows it upon the front-end with grace. And because I'm feeling generous, you get a whole 15 messages per day!
 
-### Frontend:
+### Frontend - The Holy Trinity:
 
-This interface and layout was made from scratch by me using HTML, CSS and Vanilla JavaScript.
+This interface and layout were handcrafted by me, using the divine combination of HTML, CSS, and Vanilla JavaScript. Bask in its glory!
