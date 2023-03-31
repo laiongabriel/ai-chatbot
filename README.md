@@ -12,7 +12,7 @@ Too lazy to read? No problem! Experience magic first-hand right [here](https://a
 
 ### Backend - Express.js Royalty:
 
-To keep those pesky API keys hidden from the prying eyes of the front-end, we've employed the regal Express.js framework. It creates a majestic endpoint, requests the data, and bestows it upon the front-end with grace. And because I'm feeling generous, you get a whole 15 messages per day!
+To keep those pesky API keys hidden from the prying eyes of the front-end, I've employed the regal Express.js framework. It creates a majestic endpoint, requests the data, and bestows it upon the front-end with grace. And because I'm feeling generous, you get a whole 15 messages per day!
 
 ### Frontend - The Holy Trinity:
 
